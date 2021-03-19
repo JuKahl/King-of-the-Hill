@@ -18,6 +18,3 @@ Primary.args = {
   subNavOne: "your leagues",
   subNavTwo: "create a league",
 };
-
-export const Secondary = Template.bind({});
-Secondary.args = {};

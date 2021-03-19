@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 export function NavMenuButton() {
   return (
     <button className={styles.menuBtn}>
-      <img src="icons/menu.svg" />
+      <img src="/icons/menu.svg" />
     </button>
   );
 }
@@ -11,7 +11,7 @@ export function NavMenuButton() {
 export function NavBackButton() {
   return (
     <button className={styles.backBtn}>
-      <img src="icons/back.svg" />
+      <img src="/icons/back.svg" />
     </button>
   );
 }

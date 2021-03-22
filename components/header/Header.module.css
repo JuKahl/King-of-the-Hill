@@ -1,0 +1,69 @@
+.navHeader {
+  display: grid;
+  height: 5em;
+  grid-template-areas: "navButton label profile";
+  background-color: var(--primary-color);
+}
+
+.menuBtn {
+  grid-area: navButton;
+  border-color: transparent;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.navHeaderLabel {
+  grid-area: label;
+  font-family: "Bebas Neue", cursive;
+  color: var(--secondary-color);
+  justify-self: center;
+  align-self: center;
+  padding-top: 0.45em;
+  padding-bottom: 0.5em;
+}
+
+.navProfile {
+  grid-area: profile;
+  border-radius: 100%;
+  border: 0.1em solid white;
+  justify-self: end;
+  align-self: center;
+  object-fit: cover;
+  height: 3.125rem;
+  width: 3.125rem;
+  margin-right: 1em;
+}
+
+.subNav {
+  grid-area: subnav;
+  display: grid;
+  grid-template-areas: "navOne navTwo";
+  height: 2.5rem;
+  background-color: var(--primary-color);
+}
+
+.navOne,
+.navTwo {
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 1.25em;
+  color: var(--secondary-color);
+  font-family: "Bebas Neue", cursive;
+}
+
+.navOne {
+  grid-area: navOne;
+}
+
+.navTwo {
+  grid-area: navTwo;
+}
+
+button:focus {
+  outline: none;
+}

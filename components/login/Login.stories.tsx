@@ -7,4 +7,6 @@ export default {
   component: Login,
 } as Meta;
 
-export const login = () => Login;
+const Template: Story = () => <Login />;
+
+export const Primary = Template.bind({});

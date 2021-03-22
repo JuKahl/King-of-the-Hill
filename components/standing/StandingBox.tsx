@@ -1,6 +1,6 @@
 import styles from "./Standing.module.css";
 import UserPicture from "./StandingUserPicture";
-import UserPick from "./StandingPick";
+import UserPick from "./StandingUserPick";
 
 export type StandingProps = {
   picture: string;

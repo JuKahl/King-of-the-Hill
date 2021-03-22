@@ -17,6 +17,6 @@ Primary.args = {
   username: "Julian",
   pick: "Dortmund",
   pickLogo: "https://crests.football-data.org/4.svg",
-  opponent: "Schalke",
-  opponentLogo: "https://crests.football-data.org/6.svg",
+  opponent: "Köln",
+  opponentLogo: "https://crests.football-data.org/1.svg",
 };

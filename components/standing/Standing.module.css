@@ -8,6 +8,17 @@
   background-color: var(--secondary-color);
 }
 
+.eliminated {
+  display: grid;
+  grid-template-areas: "picture username userpick";
+  width: 22.5rem;
+  height: 4.5rem;
+  border-radius: 20px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  opacity: 50%;
+}
+
 .userPicture {
   grid-area: picture;
   border-radius: 100%;

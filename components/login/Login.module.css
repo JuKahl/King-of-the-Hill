@@ -1,0 +1,32 @@
+.input {
+  border-radius: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border: none;
+  height: 3.5rem;
+  width: 20rem;
+  outline: none;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input::placeholder {
+  color: var(--primary-color);
+}
+
+.login {
+  font-family: "Bebas Neue", cursive;
+  color: var(--secondary-color);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.loginButton {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.loginButton:focus {
+  outline: none;
+}

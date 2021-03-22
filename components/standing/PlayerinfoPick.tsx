@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Playerinfo.module.css";
+import styles from "./PlayerInfo.module.css";
 
 export type Pick = {
   pick: string;
@@ -15,15 +15,14 @@ export default function UserPick({
   opponentLogo,
 }: Pick) {
   return (
-    <div className={`${styles.playerinfoPick}`}>
-      <div className={`${styles.pick}`}>
+    <div className={styles.playerInfoPick}>
+      <div className={styles.pick}>
         {pick}
-        <img className={`${styles.pickLogo}`} src={pickLogo} />
+        <img className={styles.pickLogo} src={pickLogo} />
       </div>
-
-      <p className={`${styles.opponent}`}>
+      <p className={styles.opponent}>
         {opponent}
-        <img className={`${styles.opponentLogo}`} src={opponentLogo} />
+        <img className={styles.opponentLogo} src={opponentLogo} />
       </p>
     </div>
   );

@@ -1,4 +1,4 @@
-.playerinfoBox {
+.playerInfoBox {
   display: grid;
   grid-template-areas: "picture username userpick";
   width: 22.5rem;
@@ -19,7 +19,7 @@
   opacity: 50%;
 }
 
-.playerinfoPicture {
+.playerInfoPicture {
   grid-area: picture;
   border-radius: 100%;
   border: 0.1em solid white;
@@ -30,14 +30,14 @@
   width: 3.125rem;
 }
 
-.playerinfoUsername {
+.playerInfoUsername {
   grid-area: username;
   font-size: 1.25rem;
   justify-self: center;
   align-self: center;
 }
 
-.playerinfoPick {
+.playerInfoPick {
   grid-area: userpick;
 }
 

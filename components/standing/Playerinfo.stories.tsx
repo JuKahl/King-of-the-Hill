@@ -1,14 +1,14 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import PlayerinfoBox, { PlayerinfoProps } from "./PlayerinfoBox";
+import PlayerInfoBox, { PlayerInfoProps } from "./PlayerInfoBox";
 
 export default {
-  title: "Common/PlayerinfoBox",
-  component: PlayerinfoBox,
+  title: "Common/PlayerInfoBox",
+  component: PlayerInfoBox,
   parameters: { layout: "fullscreen" },
 } as Meta;
 
-const Template: Story<PlayerinfoProps> = (args) => <PlayerinfoBox {...args} />;
+const Template: Story<PlayerInfoProps> = (args) => <PlayerInfoBox {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

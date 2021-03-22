@@ -2,7 +2,7 @@ import styles from "./Playerinfo.module.css";
 import UserPicture from "./PlayerinfoPicture";
 import UserPick from "./PlayerinfoPick";
 
-export type StandingProps = {
+export type PlayerinfoProps = {
   picture: string;
   username: string;
   pick: string;
@@ -18,7 +18,7 @@ export default function PlayerinfoBox({
   pickLogo,
   opponent,
   opponentLogo,
-}: StandingProps) {
+}: PlayerinfoProps) {
   return (
     <section className={`${styles.playerinfoBox}`}>
       <UserPicture picture={picture} />

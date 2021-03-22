@@ -1,14 +1,14 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import PlayerInfoBox, { PlayerInfoProps } from "./PlayerInfoBox";
+import UserInfoBox, { UserInfoProps } from "./UserInfoBox";
 
 export default {
-  title: "Common/PlayerInfoBox",
-  component: PlayerInfoBox,
+  title: "Common/UserInfoBox",
+  component: UserInfoBox,
   parameters: { layout: "fullscreen" },
 } as Meta;
 
-const Template: Story<PlayerInfoProps> = (args) => <PlayerInfoBox {...args} />;
+const Template: Story<UserInfoProps> = (args) => <UserInfoBox {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -17,6 +17,6 @@ Primary.args = {
   username: "Julian",
   pick: "Dortmund",
   pickLogo: "https://crests.football-data.org/4.svg",
-  opponent: "Köln",
-  opponentLogo: "https://crests.football-data.org/1.svg",
+  opponent: "Schalke",
+  opponentLogo: "https://crests.football-data.org/6.svg",
 };

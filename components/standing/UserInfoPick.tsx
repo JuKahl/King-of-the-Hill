@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PlayerInfo.module.css";
+import styles from "./UserInfo.module.css";
 
 export type Pick = {
   pick: string;
@@ -15,7 +15,7 @@ export default function UserPick({
   opponentLogo,
 }: Pick) {
   return (
-    <div className={styles.playerInfoPick}>
+    <div className={styles.userPick}>
       <div className={styles.pick}>
         {pick}
         <img className={styles.pickLogo} src={pickLogo} />

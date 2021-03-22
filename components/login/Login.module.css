@@ -20,6 +20,7 @@
   color: var(--secondary-color);
   font-size: 3rem;
   text-align: center;
+  background-color: var(--primary-color);
 }
 
 .loginButton {

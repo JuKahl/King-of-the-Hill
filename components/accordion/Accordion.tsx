@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Accordion.module.css";
 
-export type Content = {
+export type AccordionProps = {
   title: string;
   content: string;
 };
 
-export default function Accordion({ title, content }: Content) {
+export default function Accordion({ title, content }: AccordionProps) {
   const [isActive, setIsActive] = useState(false);
 
   return (

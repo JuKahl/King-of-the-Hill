@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-areas: "label" "input" "button";
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.submitBtn {
+  grid-area: button;
+  width: 12.5rem;
+  height: 2.75rem;
+  border-radius: 1.25rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+  justify-self: center;
+}
+
+.input {
+  grid-area: input;
+  border-radius: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border: none;
+  height: 2.75rem;
+  width: 20rem;
+  outline: none;
+  text-align: center;
+  margin-bottom: 2rem;
+  justify-self: center;
+}
+
+.input::placeholder {
+  color: var(--primary-color);
+  opacity: 50%;
+}
+
+.label {
+  justify-self: center;
+  padding: 2rem 5rem 1rem 0;
+}

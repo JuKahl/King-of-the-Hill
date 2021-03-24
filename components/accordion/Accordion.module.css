@@ -1,0 +1,26 @@
+.accordionItem {
+  width: 22.5rem;
+  margin: auto;
+}
+
+.accordionTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 3.75rem;
+  border-radius: 20px 20px 0 0;
+  font-size: 1.625rem;
+}
+
+.accordionTitle,
+.accordionContent {
+  padding: 1rem;
+}
+
+.accordionContent {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 0 0 20px 20px;
+}

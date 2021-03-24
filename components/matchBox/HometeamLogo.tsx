@@ -5,5 +5,5 @@ export type Logo = {
 };
 
 export default function HometeamLogo({ logo }: Logo) {
-  return <img className={`${styles.hometeamLogo}`} src={logo} />;
+  return <img className={styles.hometeamLogo} src={logo} />;
 }

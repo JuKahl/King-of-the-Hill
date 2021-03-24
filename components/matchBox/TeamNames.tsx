@@ -7,7 +7,7 @@ export type Teams = {
 
 export default function Teamnames({ home, away }: Teams) {
   return (
-    <p className={`${styles.teamnames}`}>
+    <p className={styles.teamnames}>
       {home} vs. {away}
     </p>
   );

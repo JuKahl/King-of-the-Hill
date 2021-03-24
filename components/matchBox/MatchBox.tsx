@@ -17,8 +17,8 @@ export default function MatchBox({
 }: // awayteamLogo,
 MatchBoxProps) {
   return (
-    <div className={`${styles.matchBox}`}>
-      <p className={`${styles.teamnames}`}>
+    <div className={styles.matchBox}>
+      <p className={styles.teamnames}>
         {/* <HometeamLogo logo={hometeamLogo} /> */}
         <Teamnames home={hometeam} away={awayteam} />
         {/* <AwayteamLogo logo={awayteamLogo} /> */}

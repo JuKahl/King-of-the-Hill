@@ -1,0 +1,30 @@
+.matchBox,
+.matchBoxUnselected {
+  display: grid;
+
+  /* grid-template-areas: "hometeamLogo teamnames awayteamLogo"; */
+  background-color: var(--secondary-color);
+  height: 2.75rem;
+  width: 24.35rem;
+  border-radius: 50px;
+}
+
+.matchBoxUnselected {
+  opacity: 50%;
+}
+
+.teamnames {
+  grid-area: teamnames;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* .hometeamLogo {
+  grid-area: hometeamLogo;
+  height: 1.875rem;
+}
+
+.awayteamLogo {
+  grid-area: awayteamLogo;
+  height: 1.875rem;
+} */

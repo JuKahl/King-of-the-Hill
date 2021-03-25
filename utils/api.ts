@@ -1,7 +1,3 @@
-import dotenv from "dotenv";
-
-dotenv.config();
-
 const auth = process.env.X_Auth_Token;
 
 export type Matches = {

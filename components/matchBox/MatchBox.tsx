@@ -12,8 +12,8 @@ export type MatchBoxProps = {
 
 export default function MatchBox({
   // hometeamLogo,
-  hometeam,
-  awayteam,
+  homeTeam,
+  awayTeam,
 }: // awayteamLogo,
 MatchBoxProps) {
   return (

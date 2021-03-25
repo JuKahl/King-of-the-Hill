@@ -5,7 +5,7 @@ export type Teams = {
   away: string;
 };
 
-export default function Teamnames({ home, away }: Teams) {
+export default function TeamNames({ home, away }: Teams) {
   return (
     <p className={styles.teamnames}>
       {home} vs. {away}

@@ -4,6 +4,6 @@ export type Logo = {
   logo: string;
 };
 
-export default function AwayteamLogo({ logo }: Logo) {
+export default function AwayTeamLogo({ logo }: Logo) {
   return <img className={styles.awayteamLogo} src={logo} />;
 }

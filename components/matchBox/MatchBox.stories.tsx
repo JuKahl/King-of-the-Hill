@@ -12,7 +12,7 @@ const Template: Story<MatchBoxProps> = (args) => <MatchBox {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   // awayteamLogo: "https://crests.football-data.org/4.svg",
-  awayteam: "Dortmund",
+  awayTeam: "Dortmund",
   // hometeamLogo: "https://crests.football-data.org/1.svg",
-  hometeam: "Köln",
+  homeTeam: "Köln",
 };

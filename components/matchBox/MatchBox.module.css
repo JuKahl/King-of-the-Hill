@@ -13,7 +13,7 @@
   opacity: 50%;
 }
 
-.teamnames {
+.teamNames {
   grid-area: teamnames;
   color: var(--primary-color);
   margin: 0;

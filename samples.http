@@ -1,1 +1,13 @@
-GET http://localhost:3000/api/movies
+### GET n new order
+GET http://localhost:3000/api/users
+
+
+### POST n new order
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Julian",
+    "email": "Julian@gameofthron.es",
+    "password": "asdf1231241234"
+}

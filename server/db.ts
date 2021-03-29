@@ -11,7 +11,7 @@ export const withDatabase = (handler: Handler) => async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
-  await connectDB(url, "sample_mflix");
+  await connectDB(url, "koth");
   return await handler(req, res);
 };
 
@@ -27,8 +27,13 @@ export async function getCollection(collectioName) {
   return await db.collection(collectioName);
 }
 
-export async function movieList(collectioName) {
+export async function userList(collectioName) {
   return await db.collection(collectioName).find().toArray();
+}
+
+export async function createUserDoc(userDoc) {
+  const orderCollection = await getCollection("users");
+  return await orderCollection.insertOne(userDoc);
 }
 
 export function closeDB() {

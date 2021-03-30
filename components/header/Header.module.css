@@ -64,6 +64,6 @@
   grid-area: navTwo;
 }
 
-button:focus {
+button:focus.navHeader {
   outline: none;
 }

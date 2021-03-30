@@ -1,4 +1,4 @@
-const auth = process.env.X_Auth_Token;
+const auth = process.env.X_AUTH_TOKEN;
 
 export type Matches = {
   matches: Match[];
@@ -18,7 +18,7 @@ export type Match = {
 
 export async function getBundesligaMatches() {
   const response = await fetch(
-    "http://api.football-data.org/v2/competitions/BL1/matches?matchday=26",
+    "http://api.football-data.org/v2/competitions/BL1/matches?matchday=28",
     {
       headers: {
         "X-Auth-Token": auth,
@@ -33,7 +33,7 @@ export async function getBundesligaMatches() {
 
 export async function getBundesligaMatch() {
   const response = await fetch(
-    "http://api.football-data.org/v2/matches/303228",
+    "http://api.football-data.org/v2/matches/303230",
     {
       headers: {
         "X-Auth-Token": auth,

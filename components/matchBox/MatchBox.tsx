@@ -5,9 +5,9 @@ import Teamnames from "./TeamNames";
 
 export type MatchBoxProps = {
   // hometeamLogo: string;
-  homeTeam: string;
+  homeTeam: { name: string };
   // awayteamLogo: string;
-  awayTeam: string;
+  awayTeam: { name: string };
 };
 
 export default function MatchBox({
@@ -20,7 +20,7 @@ MatchBoxProps) {
     <div className={styles.matchBox}>
       <p className={styles.teamNames}>
         {/* <HometeamLogo logo={hometeamLogo} /> */}
-        <Teamnames home={homeTeam} away={awayTeam} />
+        <Teamnames home={homeTeam.name} away={awayTeam.name} />
         {/* <AwayteamLogo logo={awayteamLogo} /> */}
       </p>
     </div>

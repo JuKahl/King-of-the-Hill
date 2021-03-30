@@ -7,6 +7,8 @@
   height: 2.75rem;
   width: 24.35rem;
   border-radius: 50px;
+  margin: auto;
+  margin-top: 1.2em;
 }
 
 .matchBoxUnselected {

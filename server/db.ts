@@ -1,6 +1,12 @@
 import { MongoClient } from "mongodb";
 import type { NextApiRequest, NextApiResponse } from "next";
 
+export type PickProps = {
+  clientId: string;
+  matchId: number;
+  team: "HOME_TEAM" | "AWAY_TEAM";
+};
+
 let client = null;
 let db = null;
 
@@ -11,7 +17,7 @@ export const withDatabase = (handler: Handler) => async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
-  await connectDB(url, "koth");
+  await connectDB(url, "db-name");
   return await handler(req, res);
 };
 
@@ -27,13 +33,13 @@ export async function getCollection(collectioName) {
   return await db.collection(collectioName);
 }
 
-export async function userList(collectioName) {
+export async function pickList(collectioName) {
   return await db.collection(collectioName).find().toArray();
 }
 
-export async function createUserDoc(userDoc) {
-  const orderCollection = await getCollection("users");
-  return await orderCollection.insertOne(userDoc);
+export async function createPickDoc(pick: PickProps) {
+  const pickCollection = await getCollection("picks");
+  return await pickCollection.insertOne(pick);
 }
 
 export function closeDB() {

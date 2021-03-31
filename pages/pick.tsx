@@ -1,14 +1,11 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import React, { useEffect, useState } from "react";
 import MatchBox from "../components/matchBox/MatchBox";
-import { Match } from "../utils/api";
+import { Match, addPick } from "../utils/api";
 import NavHeader from "../components/header/Header";
 
 export default function Home() {
   const [matches, setMatches] = useState<Match[]>(null);
-  const [pick, setPick] = useState(null);
-  const [id, setId] = useState(null);
 
   useEffect(() => {
     fetch("/api/bundesligaMatches")
@@ -20,9 +17,13 @@ export default function Home() {
   }
 
   function handleClick(value) {
-    alert(value.matchId + value.team);
-    setPick(value.matchId);
-    setId(value.team);
+    const data = {
+      pick: value.team,
+      id: value.matchId,
+      clientId: value.clientId,
+    };
+    console.log(data);
+    addPick(data);
   }
 
   const matchList = matches.map((game) => (

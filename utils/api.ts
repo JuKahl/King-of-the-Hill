@@ -45,3 +45,16 @@ export async function getBundesligaMatch() {
 
   return bundesligaMatch;
 }
+
+export async function addPick(data) {
+  const response = await fetch("/api/picks", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (response.ok) {
+    return response;
+  } else {
+    alert("HTTP-Error: " + response.status);
+  }
+}

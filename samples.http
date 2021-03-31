@@ -1,13 +1,13 @@
 ### GET n new order
-GET http://localhost:3000/api/users
+GET http://localhost:3000/api/picks
 
 
 ### POST n new order
-POST http://localhost:3000/api/users
+POST http://localhost:3000/api/picks
 Content-Type: application/json
 
 {
-    "name": "Julian",
-    "email": "Julian@gameofthron.es",
-    "password": "asdf1231241234"
+    "user": "123123" ,
+    "match": "matchId" ,
+    "pick": "pick"
 }

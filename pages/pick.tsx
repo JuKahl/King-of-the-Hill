@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import React, { useEffect, useState } from "react";
 import MatchBox from "../components/matchBox/MatchBox";
 import { Match, addPick } from "../utils/api";

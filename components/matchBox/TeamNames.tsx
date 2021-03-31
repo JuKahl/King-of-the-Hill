@@ -1,4 +1,3 @@
-import { MouseEventHandler, useState } from "react";
 import styles from "./MatchBox.module.css";
 
 export type Teams = {

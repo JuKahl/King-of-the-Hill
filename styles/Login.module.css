@@ -1,0 +1,6 @@
+.main {
+  background-color: var(--primary-color);
+  height: 100vh;
+  text-align: center;
+  padding-top: 2rem;
+}

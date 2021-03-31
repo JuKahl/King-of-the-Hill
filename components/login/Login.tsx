@@ -1,15 +1,10 @@
+import Link from "next/link";
 import styles from "./Login.module.css";
-import { LoginButton } from "./LoginButton";
-import { LoginEmail } from "./LoginEmail";
-import { LoginPassword } from "./LoginPassword";
 
-export default function Login() {
+export default function LoginForm() {
   return (
-    <div className={styles.login}>
-      <label htmlFor="button">login</label>
-      <LoginButton />
-      <LoginEmail />
-      <LoginPassword />
-    </div>
+    <Link href="/api/auth/login">
+      <a className={styles.login}>Login</a>
+    </Link>
   );
 }

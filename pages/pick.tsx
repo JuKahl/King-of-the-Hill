@@ -7,6 +7,8 @@ import NavHeader from "../components/header/Header";
 
 export default function Home() {
   const [matches, setMatches] = useState<Match[]>(null);
+  const [pick, setPick] = useState(null);
+  const [id, setId] = useState(null);
 
   useEffect(() => {
     fetch("/api/bundesligaMatches")
@@ -17,8 +19,20 @@ export default function Home() {
     return <div> Loading...</div>;
   }
 
+  function handleClick(value) {
+    alert(value.matchId + value.team);
+    setPick(value.matchId);
+    setId(value.team);
+  }
+
   const matchList = matches.map((game) => (
-    <MatchBox key={game.id} homeTeam={game.homeTeam} awayTeam={game.awayTeam} />
+    <MatchBox
+      key={game.id}
+      homeTeam={game.homeTeam}
+      awayTeam={game.awayTeam}
+      handlePick={handleClick}
+      matchId={game.id}
+    />
   ));
 
   return (

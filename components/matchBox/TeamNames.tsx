@@ -1,10 +1,11 @@
 import styles from "./MatchBox.module.css";
 import { useUser } from "@auth0/nextjs-auth0";
+import { VoidFunctionComponent } from "react";
 
 export type Teams = {
   home: string;
   away: string;
-  handlePick: any;
+  handlePick: VoidFunctionComponent;
   matchId: number;
 };
 

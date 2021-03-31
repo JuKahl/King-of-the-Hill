@@ -1,27 +1,29 @@
+import { MouseEventHandler } from "react";
 import styles from "./MatchBox.module.css";
-// import HometeamLogo from "./HometeamLogo";
-// import AwayteamLogo from "./AwayteamLogo";
 import Teamnames from "./TeamNames";
 
 export type MatchBoxProps = {
-  // hometeamLogo: string;
   homeTeam: { name: string };
-  // awayteamLogo: string;
   awayTeam: { name: string };
+  handlePick: MouseEventHandler;
+  matchId: number;
 };
 
 export default function MatchBox({
-  // hometeamLogo,
   homeTeam,
   awayTeam,
-}: // awayteamLogo,
-MatchBoxProps) {
+  handlePick,
+  matchId,
+}: MatchBoxProps) {
   return (
     <div className={styles.matchBox}>
       <p className={styles.teamNames}>
-        {/* <HometeamLogo logo={hometeamLogo} /> */}
-        <Teamnames home={homeTeam.name} away={awayTeam.name} />
-        {/* <AwayteamLogo logo={awayteamLogo} /> */}
+        <Teamnames
+          home={homeTeam.name}
+          away={awayTeam.name}
+          handlePick={handlePick}
+          matchId={matchId}
+        />
       </p>
     </div>
   );

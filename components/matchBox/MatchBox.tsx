@@ -7,6 +7,7 @@ export type MatchBoxProps = {
   awayTeam: { name: string };
   handlePick: MouseEventHandler;
   matchId: number;
+  matchday: number;
 };
 
 export default function MatchBox({
@@ -14,6 +15,7 @@ export default function MatchBox({
   awayTeam,
   handlePick,
   matchId,
+  matchday,
 }: MatchBoxProps) {
   return (
     <div className={styles.matchBox}>
@@ -23,6 +25,7 @@ export default function MatchBox({
           away={awayTeam.name}
           handlePick={handlePick}
           matchId={matchId}
+          matchday={matchday}
         />
       </p>
     </div>

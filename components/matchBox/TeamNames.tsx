@@ -6,9 +6,16 @@ export type Teams = {
   away: string;
   handlePick: any;
   matchId: number;
+  matchday: number;
 };
 
-export default function TeamNames({ home, away, handlePick, matchId }: Teams) {
+export default function TeamNames({
+  home,
+  away,
+  handlePick,
+  matchId,
+  matchday,
+}: Teams) {
   const { user, error, isLoading } = useUser();
   if (isLoading) return <div>Loading...</div>;
 
@@ -22,6 +29,7 @@ export default function TeamNames({ home, away, handlePick, matchId }: Teams) {
             team: "HOME_TEAM",
             matchId: matchId,
             clientId: user.email,
+            matchday: matchday,
           })
         }
       >
@@ -34,6 +42,7 @@ export default function TeamNames({ home, away, handlePick, matchId }: Teams) {
             team: "AWAY_TEAM",
             matchId: matchId,
             clientId: user.email,
+            matchday: matchday,
           })
         }
       >

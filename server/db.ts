@@ -2,9 +2,15 @@ import { MongoClient } from "mongodb";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export type PickProps = {
+  _id: string;
   clientId: string;
-  matchId: number;
-  team: "HOME_TEAM" | "AWAY_TEAM";
+  id: number;
+  pick: string;
+  matchday: number;
+};
+
+export type Matchday = {
+  matchday: number;
 };
 
 let client = null;
@@ -33,8 +39,9 @@ export async function getCollection(collectioName) {
   return await db.collection(collectioName);
 }
 
-export async function pickList(collectioName) {
-  return await db.collection(collectioName).find().toArray();
+export async function pickList() {
+  const pickCollection = await getCollection("picks");
+  return await pickCollection.find({ matchday: 26 }).toArray();
 }
 
 export async function createPickDoc(pick: PickProps) {

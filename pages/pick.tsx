@@ -4,7 +4,7 @@ import MatchBox from "../components/matchBox/MatchBox";
 import { Match, addPick } from "../utils/api";
 import NavHeader from "../components/header/Header";
 
-export default function Home() {
+export default function Pick() {
   const [matches, setMatches] = useState<Match[]>(null);
 
   useEffect(() => {
@@ -21,8 +21,8 @@ export default function Home() {
       pick: value.team,
       id: value.matchId,
       clientId: value.clientId,
+      matchday: value.matchday,
     };
-    console.log(data);
     addPick(data);
   }
 
@@ -33,6 +33,7 @@ export default function Home() {
       awayTeam={game.awayTeam}
       handlePick={handleClick}
       matchId={game.id}
+      matchday={game.matchday}
     />
   ));
 

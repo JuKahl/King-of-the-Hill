@@ -7,6 +7,8 @@ export type PickProps = {
   id: number;
   pick: string;
   matchday: number;
+  pickTeam: string;
+  opponentTeam: string;
 };
 
 export type Matchday = {

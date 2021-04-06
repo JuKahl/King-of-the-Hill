@@ -26,10 +26,12 @@ export default function TeamNames({
       <span
         onClick={() =>
           handlePick({
-            team: "HOME_TEAM",
+            pick: "HOME_TEAM",
             matchId: matchId,
             clientId: user.email,
             matchday: matchday,
+            pickTeam: home,
+            opponentTeam: away,
           })
         }
       >
@@ -39,10 +41,12 @@ export default function TeamNames({
       <span
         onClick={() =>
           handlePick({
-            team: "AWAY_TEAM",
+            pick: "AWAY_TEAM",
             matchId: matchId,
             clientId: user.email,
             matchday: matchday,
+            pickTeam: away,
+            opponentTeam: home,
           })
         }
       >

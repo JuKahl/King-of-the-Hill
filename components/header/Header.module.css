@@ -5,7 +5,7 @@
   background-color: var(--primary-color);
 }
 
-.menuBtn {
+.btn {
   grid-area: navButton;
   border-color: transparent;
   background-color: transparent;

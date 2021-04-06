@@ -1,17 +1,18 @@
 .userInfoBox {
   display: grid;
   grid-template-areas: "picture username userpick";
-  width: 22.5rem;
+  width: 24.35rem;
   height: 4.5rem;
   border-radius: 20px;
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  margin: 1.2rem auto 1.2rem auto;
 }
 
 .eliminated {
   display: grid;
   grid-template-areas: "picture username userpick";
-  width: 22.5rem;
+  width: 24.35rem;
   height: 4.5rem;
   border-radius: 20px;
   color: var(--primary-color);
@@ -32,34 +33,25 @@
 
 .userName {
   grid-area: username;
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   justify-self: center;
   align-self: center;
 }
 
 .userPick {
   grid-area: userpick;
+  margin-top: 1.5rem;
 }
 
 .pick {
   grid-area: pick;
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   margin: 0;
   text-align: center;
 }
 
-.pickLogo {
-  height: 1.875rem;
-  margin-left: 0.5rem;
-}
-
 .opponent {
-  font-size: 0.65rem;
+  font-size: 0.5rem;
   text-align: center;
   margin: 0.25rem;
-}
-
-.opponentLogo {
-  height: 0.875rem;
-  margin-left: 0.5rem;
 }

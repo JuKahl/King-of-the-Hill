@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import NavHeader from "../components/header/Header";
 import UserInfoBox from "../components/standing/UserInfoBox";
 import { PickProps } from "../server/db";
-import styles from "../styles/Standing.module.css";
 
 export default function standing() {
   const [picks, setPicks] = useState<PickProps[]>(null);
@@ -35,7 +34,7 @@ export default function standing() {
         <title>King of the Hill</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main>
         <NavHeader
           label={"league name *tba*"}
           picture={

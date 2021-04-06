@@ -1,4 +1,4 @@
-import { Match, addPick } from "../utils/api";
+import { Match } from "../utils/api";
 import { PickProps } from "../server/db";
 import { useEffect, useState } from "react";
 
@@ -15,10 +15,7 @@ export function result() {
       .then((response) => response.json())
       .then(setPicks);
   }, []);
-  if (!matches) {
-    return <div> Loading...</div>;
-  }
-  if (!picks) {
+  if (!matches || !picks) {
     return <div> Loading...</div>;
   }
 

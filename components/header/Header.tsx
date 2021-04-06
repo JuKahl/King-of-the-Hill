@@ -8,6 +8,8 @@ export type NavHeaderProps = {
   picture: string;
   subNavOne: string;
   subNavTwo: string;
+  linkOne: string;
+  linkTwo: string;
 };
 
 export default function NavHeader({
@@ -15,6 +17,8 @@ export default function NavHeader({
   picture,
   subNavOne,
   subNavTwo,
+  linkOne,
+  linkTwo,
 }: NavHeaderProps) {
   return (
     <div>
@@ -23,7 +27,12 @@ export default function NavHeader({
         <h1 className={`${styles.navHeaderLabel}`}>{label}</h1>
         <ProfilePicture picture={picture} />
       </section>
-      <SubNav subNavOne={subNavOne} subNavTwo={subNavTwo} />
+      <SubNav
+        subNavOne={subNavOne}
+        subNavTwo={subNavTwo}
+        linkOne={linkOne}
+        linkTwo={linkTwo}
+      />
     </div>
   );
 }

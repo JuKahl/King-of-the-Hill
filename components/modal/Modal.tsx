@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from "react";
 import styles from "./Modal.module.css";
 
 export type ModalProps = {
-  pick: any;
+  pick: any; // This needs to be fixed - feel free to suggest the right type
   onAccept: MouseEventHandler;
   onDecline: MouseEventHandler;
 };

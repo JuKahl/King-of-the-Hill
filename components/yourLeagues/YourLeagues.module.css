@@ -1,0 +1,35 @@
+.yourLeaguesContainer {
+  display: grid;
+  grid-template-areas: "label pick";
+  width: 20rem;
+  height: 4.5rem;
+  border-radius: 20px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.label {
+  grid-area: label;
+  font-size: 1rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.pickContainer {
+  grid-area: pick;
+}
+
+.pick {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  margin-top: 0.8rem;
+}
+
+.opponent {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+  margin-top: 0.4rem;
+}

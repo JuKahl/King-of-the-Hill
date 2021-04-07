@@ -1,0 +1,39 @@
+.modalPop {
+  text-align: center;
+  background-color: var(--secondary-color);
+  border: 0.02rem solid #dedede;
+  border-radius: 20px;
+  z-index: 999;
+  width: 16rem;
+  height: 8.25rem;
+  margin: auto;
+  padding: 0.3rem;
+  position: relative;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #000;
+  opacity: 0.75;
+}
+.buttonYes {
+  background-color: #3d897d;
+}
+
+.buttonNo {
+  background-color: #893e49;
+}
+
+.buttonYes,
+.buttonNo {
+  width: 3.25rem;
+  height: 2.25rem;
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  margin: 0.5rem 2rem 1rem 2rem;
+}

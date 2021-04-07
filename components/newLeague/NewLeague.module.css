@@ -22,7 +22,7 @@
   border-radius: 1.5rem;
   font-size: 1.25rem;
   color: var(--primary-color);
-  background: var(--secondary-color);
+  background: var(--background-color);
   border: none;
   height: 2.75rem;
   width: 20rem;
@@ -33,11 +33,11 @@
 }
 
 .input::placeholder {
-  color: var(--primary-color);
+  color: var(---color);
   opacity: 50%;
 }
 
 .label {
   justify-self: center;
-  padding: 2rem 5rem 1rem 0;
+  padding: 1rem 5rem 1.5rem 0;
 }

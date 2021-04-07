@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from "react";
-import styles from "./1.module.css";
+import styles from "./Modal.module.css";
 
 export type ModalProps = {
   pick: any;

@@ -15,8 +15,9 @@
   width: 24.35rem;
   height: 4.5rem;
   border-radius: 20px;
-  color: var(--primary-color);
+  color: #893e49;
   background-color: var(--secondary-color);
+  margin: 1.2rem auto 1.2rem auto;
   opacity: 50%;
 }
 

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Accordion.module.css";
 
 export type AccordionProps = {

@@ -29,7 +29,6 @@ export default function standing() {
       nextRd={game.nextRd}
     />
   ));
-  console.log(standing);
 
   return (
     <div>

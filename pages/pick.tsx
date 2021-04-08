@@ -20,7 +20,7 @@ export default function Pick() {
 
   function handleClick(value) {
     const pick = {
-      pick: value.team,
+      pick: value.pick,
       id: value.matchId,
       clientId: value.clientId,
       matchday: value.matchday,

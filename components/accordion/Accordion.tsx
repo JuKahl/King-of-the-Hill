@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import styles from "./Accordion.module.css";
 
 export type AccordionProps = {
   title: string;
-  content: string;
+  content: any; // This type needs to be adapted!
 };
 
 export default function Accordion({ title, content }: AccordionProps) {

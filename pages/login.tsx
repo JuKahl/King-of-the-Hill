@@ -12,6 +12,7 @@ export default function Login() {
 
       <main className={styles.main}>
         <LoginForm />
+        <img className={styles.logo} src="/KingOfTheHill.png" alt="Logo" />
       </main>
     </div>
   );

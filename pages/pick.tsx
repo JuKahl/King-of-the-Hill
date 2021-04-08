@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import MatchBox from "../components/matchBox/MatchBox";
 import { Match, addPick } from "../utils/api";
 import NavHeader from "../components/header/Header";
+import Modal from "../components/modal/Modal";
 
 export default function Pick() {
   const [matches, setMatches] = useState<Match[]>(null);
+  const [selectedPick, setSelectedPick] = useState(null);
 
   useEffect(() => {
     fetch("/api/bundesligaMatches")
@@ -17,16 +19,15 @@ export default function Pick() {
   }
 
   function handleClick(value) {
-    const data = {
-      pick: value.pick,
+    const pick = {
+      pick: value.team,
       id: value.matchId,
       clientId: value.clientId,
       matchday: value.matchday,
       pickTeam: value.pickTeam,
       opponentTeam: value.opponentTeam,
     };
-    addPick(data);
-    console.log(data);
+    setSelectedPick(pick);
   }
 
   const matchList = matches.map((game) => (
@@ -56,6 +57,16 @@ export default function Pick() {
           subNavTwo={"pick"}
         />
         <div>{matchList}</div>
+        {selectedPick && (
+          <Modal
+            onAccept={() => {
+              addPick(selectedPick);
+              setSelectedPick(null);
+            }}
+            onDecline={() => setSelectedPick(null)}
+            pick={selectedPick}
+          />
+        )}
       </main>
     </div>
   );

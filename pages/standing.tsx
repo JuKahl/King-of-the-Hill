@@ -42,6 +42,8 @@ export default function standing() {
           }
           subNavOne={"standing"}
           subNavTwo={"pick"}
+          linkOne={"/standing"}
+          linkTwo={"/pick"}
         />
         <div>{standing}</div>
       </main>

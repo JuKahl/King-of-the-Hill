@@ -10,7 +10,7 @@ export type ModalProps = {
 const Modal = ({ onDecline, onAccept, pick }: ModalProps) => (
   <div className={styles.modal}>
     <div className={styles.modalPop} role="dialog" aria-modal={true}>
-      <p>Do you really want to pick {pick.pick} ?</p>
+      <p>Do you really want to pick {pick.pickTeam} ?</p>
       <button className={styles.buttonYes} onClick={onAccept}>
         Yes
       </button>

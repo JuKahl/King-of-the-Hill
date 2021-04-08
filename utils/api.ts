@@ -18,7 +18,7 @@ export type Match = {
 
 export async function getBundesligaMatches() {
   const response = await fetch(
-    "http://api.football-data.org/v2/competitions/BL1/matches?matchday=28",
+    "http://api.football-data.org/v2/competitions/BL1/matches?matchday=27",
     {
       headers: {
         "X-Auth-Token": auth,
@@ -48,6 +48,32 @@ export async function getBundesligaMatch() {
 
 export async function addPick(data) {
   const response = await fetch("/api/picks", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (response.ok) {
+    return response;
+  } else {
+    alert("HTTP-Error: " + response.status);
+  }
+}
+
+export async function pickWin(data) {
+  const response = await fetch("/api/pickWin", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (response.ok) {
+    return response;
+  } else {
+    alert("HTTP-Error: " + response.status);
+  }
+}
+
+export async function pickLoss(data) {
+  const response = await fetch("/api/pickLoss", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),

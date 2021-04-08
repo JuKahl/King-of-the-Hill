@@ -7,6 +7,7 @@ export type UserInfoProps = {
   username: string;
   pick: string;
   opponent: string;
+  nextRd: string;
 };
 
 export default function UserInfoBox({
@@ -14,9 +15,12 @@ export default function UserInfoBox({
   username,
   pick,
   opponent,
+  nextRd,
 }: UserInfoProps) {
   return (
-    <section className={styles.userInfoBox}>
+    <section
+      className={nextRd == "yes" ? styles.userInfoBox : styles.eliminated}
+    >
       <UserPicture picture={picture} />
       <p className={styles.userName}>{username}</p>
       <UserPick pick={pick} opponent={opponent} />

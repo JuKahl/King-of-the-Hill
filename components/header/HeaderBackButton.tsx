@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import ProfilePicture from "./HeaderProfile";
 import SubNav from "./HeaderSubNav";
-import { NavMenuButton } from "./HeaderNavButton";
+import { NavBackButton } from "./HeaderNavButton";
 
 export type NavHeaderProps = {
   label: string;
@@ -12,7 +12,7 @@ export type NavHeaderProps = {
   linkTwo: string;
 };
 
-export default function NavHeader({
+export default function NavHeaderBack({
   label,
   picture,
   subNavOne,
@@ -23,7 +23,7 @@ export default function NavHeader({
   return (
     <div>
       <section className={`${styles.navHeader}`}>
-        <NavMenuButton />
+        <NavBackButton />
         <h1 className={`${styles.navHeaderLabel}`}>{label}</h1>
         <ProfilePicture picture={picture} />
       </section>

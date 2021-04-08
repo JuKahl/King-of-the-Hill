@@ -1,8 +1,9 @@
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 export function NavMenuButton() {
   return (
-    <button className={styles.menuBtn}>
+    <button className={styles.btn}>
       <img src="/icons/menu.svg" />
     </button>
   );
@@ -10,8 +11,10 @@ export function NavMenuButton() {
 
 export function NavBackButton() {
   return (
-    <button className={styles.backBtn}>
-      <img src="/icons/back.svg" />
-    </button>
+    <Link href={"/overview"}>
+      <button className={styles.btn}>
+        <img src="/icons/back.svg" />
+      </button>
+    </Link>
   );
 }

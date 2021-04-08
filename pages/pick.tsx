@@ -24,6 +24,8 @@ export default function Pick() {
       id: value.matchId,
       clientId: value.clientId,
       matchday: value.matchday,
+      pickTeam: value.pickTeam,
+      opponentTeam: value.opponentTeam,
     };
     setSelectedPick(pick);
   }

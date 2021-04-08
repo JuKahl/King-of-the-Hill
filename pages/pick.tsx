@@ -55,6 +55,8 @@ export default function Pick() {
           }
           subNavOne={"standing"}
           subNavTwo={"pick"}
+          linkOne={"/standing"}
+          linkTwo={"/pick"}
         />
         <div>{matchList}</div>
         {selectedPick && (

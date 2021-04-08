@@ -11,7 +11,7 @@ export type SingleMatch = {
 export type Match = {
   id: number;
   matchday: number;
-  score: { winner: "HOME_TEAM" | "AWAY_TEAM" | "DRAW" };
+  score: { winner: string };
   homeTeam: { name: string };
   awayTeam: { name: string };
 };

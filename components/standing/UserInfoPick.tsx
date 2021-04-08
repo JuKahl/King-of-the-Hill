@@ -3,27 +3,14 @@ import styles from "./UserInfo.module.css";
 
 export type Pick = {
   pick: string;
-  pickLogo: string;
   opponent: string;
-  opponentLogo: string;
 };
 
-export default function UserPick({
-  pick,
-  pickLogo,
-  opponent,
-  opponentLogo,
-}: Pick) {
+export default function UserPick({ pick, opponent }: Pick) {
   return (
     <div className={styles.userPick}>
-      <div className={styles.pick}>
-        {pick}
-        <img className={styles.pickLogo} src={pickLogo} />
-      </div>
-      <p className={styles.opponent}>
-        {opponent}
-        <img className={styles.opponentLogo} src={opponentLogo} />
-      </p>
+      <p className={styles.pick}>{pick}</p>
+      <p className={styles.opponent}>vs. {opponent}</p>
     </div>
   );
 }

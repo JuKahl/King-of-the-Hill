@@ -3,6 +3,8 @@
   color: var(--secondary-color);
   font-size: 3rem;
   background-color: var(--primary-color);
+  text-align: center;
+  padding: 7rem;
 }
 
 a.login,

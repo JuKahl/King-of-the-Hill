@@ -1,6 +1,12 @@
 .main {
-  background-color: var(--primary-color);
+  display: grid;
   height: 100vh;
-  text-align: center;
-  padding-top: 2rem;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  background-color: var(--primary-color);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }

@@ -6,9 +6,16 @@ export type Teams = {
   away: string;
   handlePick: any;
   matchId: number;
+  matchday: number;
 };
 
-export default function TeamNames({ home, away, handlePick, matchId }: Teams) {
+export default function TeamNames({
+  home,
+  away,
+  handlePick,
+  matchId,
+  matchday,
+}: Teams) {
   const { user, error, isLoading } = useUser();
   if (isLoading) return <div>Loading...</div>;
 
@@ -19,9 +26,12 @@ export default function TeamNames({ home, away, handlePick, matchId }: Teams) {
       <span
         onClick={() =>
           handlePick({
-            team: "HOME_TEAM",
+            pick: "HOME_TEAM",
             matchId: matchId,
             clientId: user.email,
+            matchday: matchday,
+            pickTeam: home,
+            opponentTeam: away,
           })
         }
       >
@@ -31,9 +41,12 @@ export default function TeamNames({ home, away, handlePick, matchId }: Teams) {
       <span
         onClick={() =>
           handlePick({
-            team: "AWAY_TEAM",
+            pick: "AWAY_TEAM",
             matchId: matchId,
             clientId: user.email,
+            matchday: matchday,
+            pickTeam: away,
+            opponentTeam: home,
           })
         }
       >

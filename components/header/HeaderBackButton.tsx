@@ -12,7 +12,7 @@ export type NavHeaderProps = {
   linkTwo: string;
 };
 
-export default function NavHeader({
+export default function NavHeaderBack({
   label,
   picture,
   subNavOne,

@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { withDatabase, pickList, PickProps, pickLoss } from "../../server/db";
+import { withDatabase, PickProps, pickLoss } from "../../server/db";
 
 export default withDatabase(
   async (req: NextApiRequest, res: NextApiResponse) => {

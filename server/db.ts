@@ -9,6 +9,7 @@ export type PickProps = {
   matchday: number;
   pickTeam: string;
   opponentTeam: string;
+  nextRd: string;
 };
 
 export type Matchday = {

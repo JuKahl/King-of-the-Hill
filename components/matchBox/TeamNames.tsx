@@ -32,6 +32,7 @@ export default function TeamNames({
             matchday: matchday,
             pickTeam: home,
             opponentTeam: away,
+            nextRd: "yes",
           })
         }
       >
@@ -47,6 +48,7 @@ export default function TeamNames({
             matchday: matchday,
             pickTeam: away,
             opponentTeam: home,
+            nextRd: "yes",
           })
         }
       >

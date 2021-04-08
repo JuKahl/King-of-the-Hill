@@ -4,6 +4,7 @@ import MatchBox from "../components/matchBox/MatchBox";
 import { Match, addPick } from "../utils/api";
 import Modal from "../components/modal/Modal";
 import NavHeaderBack from "../components/header/HeaderBackButton";
+import LoadingScreen from "../components/loadingScreen/loadingScreen";
 
 export default function Pick() {
   const [matches, setMatches] = useState<Match[]>(null);
@@ -15,7 +16,7 @@ export default function Pick() {
       .then(setMatches);
   }, []);
   if (!matches) {
-    return <div> Loading...</div>;
+    return <LoadingScreen />;
   }
 
   function handleClick(value) {

@@ -23,8 +23,8 @@ export default withDatabase(
           res.status(200).json(newPick);
         });
       else {
-        await createPickDoc(req.body).then(() => {
-          res.status(200).json(req.body);
+        await createPickDoc(newPick).then(() => {
+          res.status(200).json(newPick);
         });
       }
     }

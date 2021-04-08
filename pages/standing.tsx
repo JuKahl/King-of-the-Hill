@@ -26,9 +26,9 @@ export default function standing() {
       username={game.clientId}
       pick={game.pickTeam}
       opponent={game.opponentTeam}
+      nextRd={game.nextRd}
     />
   ));
-  console.log(standing);
 
   return (
     <div>

@@ -20,6 +20,8 @@ export default function newLeague() {
           }
           subNavOne={"your leagues"}
           subNavTwo={"new league"}
+          linkOne={"/yourleagues"}
+          linkTwo={"/newleague"}
         />
         <Accordion title={"Create a league"} content={CreateLeague()} />
         <Accordion title={"Join a league"} content={JoinLeague()} />

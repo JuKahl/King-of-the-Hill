@@ -43,7 +43,7 @@ export async function getCollection(collectioName) {
 
 export async function pickList() {
   const pickCollection = await getCollection("picks");
-  return await pickCollection.find({ matchday: 26 }).toArray();
+  return await pickCollection.find({ matchday: 28 }).toArray();
 }
 
 export async function createPickDoc(pick: PickProps) {

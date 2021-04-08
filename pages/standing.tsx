@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import NavHeaderBack from "../components/header/HeaderBackButton";
+import LoadingScreen from "../components/loadingScreen/loadingScreen";
 import UserInfoBox from "../components/standing/UserInfoBox";
 import { PickProps } from "../server/db";
 
@@ -13,7 +14,7 @@ export default function standing() {
       .then(setPicks);
   }, []);
   if (!picks) {
-    return <div> Loading...</div>;
+    return <LoadingScreen />;
   }
   console.log(picks);
   const standing = picks.map((game) => (
@@ -24,9 +25,10 @@ export default function standing() {
       }
       username={game.clientId}
       pick={game.pickTeam}
-      opponent={`game.opponentTeam`}
+      opponent={game.opponentTeam}
     />
   ));
+  console.log(standing);
 
   return (
     <div>

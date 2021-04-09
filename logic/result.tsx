@@ -1,4 +1,4 @@
-import { Match } from "../utils/api";
+import { Match, pickLoss, pickWin } from "../utils/api";
 import { PickProps } from "../server/db";
 import { useEffect, useState } from "react";
 
@@ -28,14 +28,13 @@ export function result() {
   const result = picks.map((pick) => findArrayElementById(matches, pick.id));
   const length = picks.length;
   for (let i = 0; i < length; i++) {
-    if (result[i].status == "FINISHED") {
-      if (result[i].score.winner == picks[i].pick) {
-        console.log(`${picks[i]._id} won`);
-      } else {
-        console.log(`${picks[i]._id} lost`);
+    if (picks[i].nextRd == "yes")
+      if (result[i].status == "FINISHED") {
+        if (result[i].score.winner == picks[i].pick) {
+          pickWin(picks[i]);
+        } else {
+          pickLoss(picks[i]);
+        }
       }
-    } else {
-      console.log("GAME NOT FINISHED YET");
-    }
   }
 }

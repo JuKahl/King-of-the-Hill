@@ -16,7 +16,7 @@ export default function standing() {
   if (!picks) {
     return <LoadingScreen />;
   }
-  console.log(picks);
+
   const standing = picks.map((game) => (
     <UserInfoBox
       key={game.id}

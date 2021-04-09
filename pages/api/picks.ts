@@ -1,5 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { withDatabase, pickList, createPickDoc } from "../../server/db";
+import {
+  withDatabase,
+  pickList,
+  createPickDoc,
+  updatePickDoc,
+  PickProps,
+} from "../../server/db";
 
 export default withDatabase(
   async (req: NextApiRequest, res: NextApiResponse) => {
@@ -8,9 +14,19 @@ export default withDatabase(
       res.status(200).json(list);
     }
     if (req.method === "POST") {
-      await createPickDoc(req.body).then(() => {
-        res.status(200).json(req.body);
-      });
+      const newPick: PickProps = req.body;
+
+      const list = await pickList();
+      const pickExists = list.some((pick) => pick.clientId == newPick.clientId);
+      if (pickExists)
+        await updatePickDoc(newPick).then(() => {
+          res.status(200).json(newPick);
+        });
+      else {
+        await createPickDoc(newPick).then(() => {
+          res.status(200).json(newPick);
+        });
+      }
     }
   }
 );

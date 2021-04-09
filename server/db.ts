@@ -45,7 +45,7 @@ export async function getCollection(collectioName) {
 export async function pickList() {
   const pickCollection = await getCollection("picks");
   return await pickCollection
-    .find({ matchday: 28 })
+    // .find({ matchday: 27 }) // may need this filter again at a later point
     .sort({ nextRd: -1 })
     .toArray();
 }
@@ -53,6 +53,65 @@ export async function pickList() {
 export async function createPickDoc(pick: PickProps) {
   const pickCollection = await getCollection("picks");
   return await pickCollection.insertOne(pick);
+}
+
+export async function updatePickDoc(pick: PickProps) {
+  const pickCollection = await getCollection("picks");
+  const updateResult = await pickCollection.updateOne(
+    { clientId: pick.clientId },
+    {
+      $set: {
+        clientId: pick.clientId,
+        id: pick.id,
+        pick: pick.pick,
+        matchday: pick.matchday,
+        pickTeam: pick.pickTeam,
+        opponentTeam: pick.opponentTeam,
+      },
+    },
+    { upsert: true }
+  );
+  return updateResult.modifiedCount >= 1;
+}
+
+export async function pickWin(pick: PickProps) {
+  const pickCollection = await getCollection("picks");
+  const updateResult = await pickCollection.updateOne(
+    { clientId: pick.clientId },
+    {
+      $set: {
+        clientId: pick.clientId,
+        id: pick.id,
+        pick: pick.pick,
+        matchday: pick.matchday,
+        pickTeam: pick.pickTeam,
+        opponentTeam: pick.opponentTeam,
+        nextRd: "yes",
+      },
+    },
+    { upsert: true }
+  );
+  return updateResult.modifiedCount >= 1;
+}
+
+export async function pickLoss(pick: PickProps) {
+  const pickCollection = await getCollection("picks");
+  const updateResult = await pickCollection.updateOne(
+    { clientId: pick.clientId },
+    {
+      $set: {
+        clientId: pick.clientId,
+        id: 0,
+        pick: "",
+        matchday: 0,
+        pickTeam: "❌",
+        opponentTeam: "",
+        nextRd: "no",
+      },
+    },
+    { upsert: true }
+  );
+  return updateResult.modifiedCount >= 1;
 }
 
 export function closeDB() {

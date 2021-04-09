@@ -1,18 +1,19 @@
+import Link from "next/link";
 import styles from "./YourLeagues.module.css";
+import YourPick from "./YourPick";
 
-export type YourLeaguesProps = {
+export type YourPickProps = {
   pick: string;
   opponent: string;
 };
 
-export default function YourLeagues({ pick, opponent }: YourLeaguesProps) {
+export default function YourLeagues({ pick, opponent }: YourPickProps) {
   return (
-    <section className={styles.yourLeaguesContainer}>
-      <p className={styles.label}>Your pick</p>
-      <div className={styles.pickContainer}>
-        <p className={styles.pick}>{pick}</p>
-        <p className={styles.opponent}>vs. {opponent}</p>
-      </div>
+    <section>
+      <YourPick pick={pick} opponent={opponent} />
+      <Link href={"/standing"}>
+        <button className={styles.btn}>Details</button>
+      </Link>
     </section>
   );
 }

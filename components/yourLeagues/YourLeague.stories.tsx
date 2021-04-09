@@ -1,6 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import YourLeagues, { YourLeaguesProps } from "./YourLeagues";
+import YourLeagues, { YourPickProps } from "./YourLeagues";
 
 export default {
   title: "Common/YourLeagues",
@@ -8,7 +8,7 @@ export default {
   parameters: { layout: "fullscreen" },
 } as Meta;
 
-const Template: Story<YourLeaguesProps> = (args) => <YourLeagues {...args} />;
+const Template: Story<YourPickProps> = (args) => <YourLeagues {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

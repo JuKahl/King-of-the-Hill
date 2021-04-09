@@ -16,7 +16,7 @@ export function result() {
       .then(setPicks);
   }, []);
   if (!matches || !picks) {
-    return <div> Loading...</div>;
+    return;
   }
 
   function findArrayElementById(array, id) {

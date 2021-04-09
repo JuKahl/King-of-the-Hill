@@ -1,4 +1,4 @@
-.yourLeaguesContainer {
+.yourPickContainer {
   display: grid;
   grid-template-areas: "label pick";
   width: 20rem;
@@ -32,4 +32,15 @@
   text-align: center;
   margin: 0;
   margin-top: 0.4rem;
+}
+
+.btn {
+  width: 12.5rem;
+  height: 2.75rem;
+  border-radius: 1.25rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+  margin: 1.5rem auto 1.5rem auto;
 }

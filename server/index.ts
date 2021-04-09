@@ -3,6 +3,7 @@ import { parse } from "url";
 import next from "next";
 import path from "path";
 import fs from "fs/promises";
+import { startRefreshInterval } from "./refresh";
 
 const dev = process.env.NODE_ENV !== "production";
 const port = process.env.PORT || 3000;
@@ -47,5 +48,7 @@ app.prepare().then(() => {
     handle(req, res, parsedUrl);
   }).listen(port, () => {
     console.log(`> Ready on http://localhost:${port}`);
+
+    startRefreshInterval();
   });
 });

@@ -45,7 +45,7 @@ export async function getCollection(collectioName) {
 export async function pickList() {
   const pickCollection = await getCollection("picks");
   return await pickCollection
-    // .find({ matchday: 27 }) // may need this filter again at a later point
+    .find({ matchday: 27 })
     .sort({ nextRd: -1 })
     .toArray();
 }

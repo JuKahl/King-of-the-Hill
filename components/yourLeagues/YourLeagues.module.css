@@ -1,12 +1,12 @@
 .yourPickContainer {
   display: grid;
   grid-template-areas: "label pick";
-  width: 20rem;
+  width: 20.5rem;
   height: 4.5rem;
   border-radius: 20px;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
-  background-color: var(--secondary-color);
+  background-color: var(---color);
 }
 
 .label {
@@ -42,5 +42,7 @@
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-size: 1.25rem;
-  margin: 1.5rem auto 1.5rem auto;
+  margin-left: 20%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }

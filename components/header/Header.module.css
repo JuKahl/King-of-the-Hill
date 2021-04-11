@@ -67,3 +67,12 @@
 button:focus.navHeader {
   outline: none;
 }
+
+.active {
+  border-bottom: solid 5px white;
+  opacity: 100%;
+}
+
+.inactive {
+  opacity: 50%;
+}

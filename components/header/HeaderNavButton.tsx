@@ -11,7 +11,7 @@ export function NavMenuButton() {
 
 export function NavBackButton() {
   return (
-    <Link href={"/overview"}>
+    <Link href={"/yourleagues"}>
       <button className={styles.btn}>
         <img src="/icons/back.svg" />
       </button>

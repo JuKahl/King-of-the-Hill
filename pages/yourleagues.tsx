@@ -2,8 +2,34 @@ import Head from "next/head";
 import Accordion from "../components/accordion/Accordion";
 import NavHeader from "../components/header/Header";
 import YourLeagues from "../components/yourLeagues/YourLeagues";
+import { useUser } from "@auth0/nextjs-auth0";
+import React, { useEffect, useState } from "react";
+import LoadingScreen from "../components/loadingScreen/loadingScreen";
 
 export default function newLeague() {
+  const [pick, setPick] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/userPick")
+      .then((response) => response.json())
+      .then(setPick);
+  }, []);
+  if (!pick) {
+    return <LoadingScreen />;
+  }
+  const { user, error, isLoading } = useUser();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+  console.log(user.email);
+
+  const userPick = pick.map((pick) => (
+    <YourLeagues
+      key={pick.id}
+      pick={pick.pickTeam}
+      opponent={pick.opponentTeam}
+    />
+  ));
+
   return (
     <div>
       <Head>
@@ -21,10 +47,7 @@ export default function newLeague() {
           linkOne={"/yourleagues"}
           linkTwo={"/newleague"}
         />
-        <Accordion
-          title={"CGN-WEB-21-1"}
-          content={<YourLeagues pick={"Dortmund"} opponent={"Bremen"} />}
-        />
+        <Accordion title={"CGN-WEB-21-1"} content={userPick} />
         <Accordion
           title={"HH-WEB-21-1"}
           content={<YourLeagues pick={"Dortmund"} opponent={"Bremen"} />}

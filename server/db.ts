@@ -50,6 +50,11 @@ export async function pickList() {
     .toArray();
 }
 
+export async function userPick() {
+  const pickCollection = await getCollection("picks");
+  return await pickCollection.find({ clientId: "TBA" }).toArray();
+}
+
 export async function createPickDoc(pick: PickProps) {
   const pickCollection = await getCollection("picks");
   return await pickCollection.insertOne(pick);

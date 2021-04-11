@@ -5,6 +5,7 @@
   background-color: var(--primary-color);
   text-align: center;
   padding: 7rem;
+  letter-spacing: 0.2rem;
 }
 
 a.login,
